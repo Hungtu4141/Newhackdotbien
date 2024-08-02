@@ -302,6 +302,14 @@ page1:Toggle('Fram Nerser',false,function(value)
     CL = value
 end)
 
+page1:Toggle('Fram Tradding Zummy',false,function(value)
+    EL = value
+end)
+
+page1:Toggle('Fram Zamasu',false,function(value)
+    EL = value
+end)
+
 page1:Button("Kill Zama [ Fast ]",function()
         pcall(function()
             for _,v in pairs(game.workspace:GetChildren()) do
@@ -644,6 +652,44 @@ spawn(function()
     while wait() do
         if CC then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(661.635742, 113.932434, 4426.24463, 0.998946428, -8.63209237e-08, 0.0458918735, 8.94843097e-08, 1, -6.68767939e-08, -0.0458918735, 7.09129395e-08, 0.998946428)
+            pcall(function()
+                    spawn(function()
+                    game:GetService("RunService").Heartbeat:Connect(function()
+                        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid") then
+                            setfflag("HumanoidParallelRemoveNoPhysics", "False")
+                            setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
+                            game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(13)
+                        end
+                    end)
+                end)
+            end)
+        end
+    end
+end)
+
+spawn(function()
+    while wait() do
+        if CC then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9940.25195, 9846.04297, 42.1312103, -0.999908566, -0, -0.0135264089, -0, 1.00000012, -0, 0.0135264089, 0, -0.999908566)
+            pcall(function()
+                    spawn(function()
+                    game:GetService("RunService").Heartbeat:Connect(function()
+                        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid") then
+                            setfflag("HumanoidParallelRemoveNoPhysics", "False")
+                            setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
+                            game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(13)
+                        end
+                    end)
+                end)
+            end)
+        end
+    end
+end)
+
+spawn(function()
+    while wait() do
+        if NN then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3332.79761, 90.3017426, 1399.00562, -0.683260739, -0.0221581031, -0.729838192, -0.000268015516, 0.999547005, -0.0300956331, 0.730174422, -0.0203675572, -0.682957172)
             pcall(function()
                     spawn(function()
                     game:GetService("RunService").Heartbeat:Connect(function()
