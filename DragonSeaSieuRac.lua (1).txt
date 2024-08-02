@@ -494,7 +494,7 @@ page1_4:Toggle('Auto Fram Raid',false,function(value)
     AutoFarmRaid = value
 end)
 
-local page4_4 = tab4:CraftPage('Fram Setting',2)
+local page4= tab4:CraftPage('Fram Setting',2)
 
 page4:Toggle('Fast Attack [ Sword Item ]',false,function(value)
     CBLRaid = value
