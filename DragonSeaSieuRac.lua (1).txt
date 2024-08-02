@@ -303,11 +303,11 @@ page1:Toggle('Fram Nerser',false,function(value)
 end)
 
 page1:Toggle('Fram Tradding Zummy',false,function(value)
-    EL = value
+    RR = value
 end)
 
 page1:Toggle('Fram Zamasu',false,function(value)
-    EL = value
+    NN = value
 end)
 
 page1:Button("Kill Zama [ Fast ]",function()
@@ -669,7 +669,7 @@ end)
 
 spawn(function()
     while wait() do
-        if CC then
+        if RR then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9940.25195, 9846.04297, 42.1312103, -0.999908566, -0, -0.0135264089, -0, 1.00000012, -0, 0.0135264089, 0, -0.999908566)
             pcall(function()
                     spawn(function()
