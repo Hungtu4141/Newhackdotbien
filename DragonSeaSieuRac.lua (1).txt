@@ -290,16 +290,16 @@ page1:Toggle('Auto Farm Level',false,function(value)
     Farm = value
 end)
 
-page1:Toggle('Fram Zama',false,function(value)
-    Bunt = value
+page1:Toggle('Auto Farm KuKu',false,function(value)
+    CC = value
 end)
 
 page1:Toggle('Fast Attack',false,function(value)
     CBLRaid = value
 end)
 
-page1:Toggle('Fram Brolly',false,function(value)
-    Bunt = value
+page1:Toggle('Fram Nerser',false,function(value)
+    CC = value
 end)
 
 page1:Button("Kill Zama [ Fast ]",function()
@@ -636,6 +636,57 @@ spawn(function()
             end)
         else
             Fast = false
+        end
+    end
+end)
+
+spawn(function()
+    while wait() do
+        if CC then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(661.635742, 113.932434, 4426.24463, 0.998946428, -8.63209237e-08, 0.0458918735, 8.94843097e-08, 1, -6.68767939e-08, -0.0458918735, 7.09129395e-08, 0.998946428)
+            pcall(function()
+                    spawn(function()
+                    game:GetService("RunService").Heartbeat:Connect(function()
+                        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid") then
+                            setfflag("HumanoidParallelRemoveNoPhysics", "False")
+                            setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
+                            game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(13)
+                        end
+                    end)
+                end)
+            end)
+        end
+    end
+end)
+
+spawn(function()
+    while wait() do
+        if CL then
+            if game.workspace:FindFirstChild("Npc") then
+                check = game.Workspace.Npc
+            end
+            wait()
+            for i,v in pairs(check:GetChildren()) do
+                if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 and (v.HumanoidRootPart.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 400 then
+                    pcall(function()
+                        repeat wait()
+                            sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+                            v.HumanoidRootPart.CanCollide = false
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, DistanceMob, 9)
+                            EquipWeapon(Weapon)
+                            if Method == "Normal"then
+                                Click()
+                            elseif Method == "Fast" then
+                                Fast = true
+                            elseif Method == "Super Fast" then
+                                SuperFast = true
+                            else
+                                Click()
+                            end
+                        until not Killaura or not v.Parent or v.Humanoid.Health <= 1
+                    end)
+                end
+            end
         end
     end
 end)
