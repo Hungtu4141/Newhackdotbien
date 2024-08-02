@@ -113,7 +113,7 @@ function UnEquipWeapon(ToolSess)
 end
 
 _G.Color = Color3.fromRGB(255,0,255)
-_G.Logo = 18685184675
+_G.Logo = 18685184623
 wait(0.1)
 
 local Weaponlist = {}
@@ -268,7 +268,7 @@ end
 CheckQuest()
 
 local Evil = loadstring(game:HttpGet("https://raw.githubusercontent.com/x2duck/gui-/main/sillyhubfreegui.lua"))()
-local Win = library:Evil("Minaturi Hub | Dragon Sea","",_G.Logo )
+local Win = library:Evil("ArDark","",_G.Logo )
 local Weapon = nil
 local tab1 = Win:CraftTab('Main')
 local tab2 = Win:CraftTab('Misc')
@@ -480,7 +480,7 @@ end)
 
 local page1_4 = tab4:CraftPage('Raid',1)
 
-page1_4:Toggle('Teleport Raids',false,function()
+page1_4:Button("Teleport Raid",function()
     local TeleportService = game:GetService('TeleportService')
 				GameId = 13373351184
 				TeleportService:Teleport(GameId, game.Players.LocalPlayer)
@@ -493,6 +493,8 @@ end)
 page1_4:Toggle('Auto Fram Raid',false,function(value)
     AutoFarmRaid = value
 end)
+
+local page4_4 = tab4:CraftPage('Fram Setting',2)
 
 page1_4:Toggle('Fast Attack',false,function(value)
     CBLRaid = value
