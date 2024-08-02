@@ -274,6 +274,7 @@ local tab1 = Win:CraftTab('Main')
 local tab2 = Win:CraftTab('Misc')
 local tab3 = Win:CraftTab('Teleport')
 local tab4 = Win:CraftTab('Raid')
+local tab5 = Win:CraftTab('Sea Best')
 local page1 = tab1:CraftPage('Main',1)
 
 page1:Toggle('Auto Farm Level',false,function(value)
@@ -386,9 +387,7 @@ page2_2:Toggle('Auto Stats (Sword)',false,function(value)
     Sword = value
 end)
 
-page2_2:Toggle('Auto Stats (Devil Fruit)',false,function(value)
-    DevilFruit = value
-end)
+
 
 local page1_3 = tab3:CraftPage('Teleport (Sea 1)',1)
 
@@ -496,8 +495,12 @@ end)
 
 local page4_4= tab4:CraftPage('Fram Setting',2)
 
-page4_4:Toggle('Fast Attack [ Sword Item ]',false,function(value)
+page4_4:Toggle('Fast Attack [ 75% ]',false,function(value)
     CBLRaid = value
+end)
+
+page4_4:Button('Super Low Mode',function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/crystalnerd/ScriptLinhTinh/main/AntiLag2"))()
 end)
 
 
@@ -661,7 +664,7 @@ spawn(function()
                             sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
                             v.Humanoid.Health = 0
                             v.HumanoidRootPart.CanCollide = false
-                            v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                            v.HumanoidRootPart.Size = Vector3.new(1150,1150,1150)
                             v.HumanoidRootPart.Transparency = 1000
                         until not KillauraRaid or not v.Parent or v.Humanoid.Health <= 1
                     end)
