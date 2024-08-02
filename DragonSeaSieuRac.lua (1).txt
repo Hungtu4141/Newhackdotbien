@@ -299,7 +299,7 @@ page1:Toggle('Fast Attack',false,function(value)
 end)
 
 page1:Toggle('Fram Nerser',false,function(value)
-    CC = value
+    CL = value
 end)
 
 page1:Button("Kill Zama [ Fast ]",function()
@@ -740,7 +740,7 @@ spawn(function()
 end)
 
 spawn(function()
-    while wait(0.01) do
+    while wait(0) do
         if CBLRaid or Fast then
             pcall(function()
                 local args = {
