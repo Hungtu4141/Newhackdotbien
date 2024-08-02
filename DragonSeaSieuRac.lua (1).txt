@@ -496,7 +496,7 @@ end)
 
 local page2_4= tab4:CraftPage('Fram Setting',2)
 
-page1_4:Toggle('Fast Attack [ Sword Item ]',false,function(value)
+page2_4:Toggle('Fast Attack [ Sword Item ]',false,function(value)
     CBLRaid = value
 end)
 
