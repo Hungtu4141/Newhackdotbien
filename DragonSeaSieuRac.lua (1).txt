@@ -1,2 +1,2 @@
 
-game.Players.LocalPlayer:Kick("Eggs have been removed")
+game.Players.Local"Eggs have been removed")
